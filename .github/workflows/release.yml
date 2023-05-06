@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Trigger the workflow on push events for tags starting with 'v'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install setuptools wheel twine
+
+      - name: Build and upload
+        run: |
+          # Extract the version from the Git tag
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's/refs\/tags\/v//' -e 's/\./\\./g')
+          # Update the version in setup.py
+          sed -i "s/0.1.0-dev/${VERSION}/" setup.py
+          # Build and upload the distribution files
+          python setup.py sdist bdist_wheel
+          twine upload dist/*
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
