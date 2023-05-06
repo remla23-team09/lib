@@ -25,6 +25,11 @@ jobs:
 
       - name: Build and upload
         run: |
+          # Extract the version from the Git tag
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's/refs\/tags\/v//' -e 's/\./\\./g')
+          # Update the version in setup.py
+          sed -i "s/0.1.0-dev/${VERSION}/" setup.py
+          # Build and upload the distribution files
           python setup.py sdist bdist_wheel
           twine upload dist/*
         env:
