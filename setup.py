@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='test_package_15551',
-    version='1.0.0',
+    version='0.1.0-dev',
     description='A test library',
     author='Zhiyong Zhu',
     author_email='z13913982280@gmail.com',
