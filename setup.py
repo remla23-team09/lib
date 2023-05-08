@@ -1,6 +1,6 @@
 from setuptools import setup
 import setuptools
-from VersionUtil import VersionUtil
+from src.VersionUtil import VersionUtil
 
 setup(
     name='REMLA23_team12_lib',
