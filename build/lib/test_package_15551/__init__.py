@@ -1,1 +1,0 @@
-from test_package_15551.main import cookie2dict

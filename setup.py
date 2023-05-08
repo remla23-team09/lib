@@ -1,15 +1,17 @@
 from setuptools import setup
+import setuptools
+from VersionUtil import VersionUtil
 
 setup(
-    name='test_package_15551',
-    version='0.1.0-dev',
+    name='REMLA23_team12_lib',
+    version=VersionUtil.get_version(),
     description='A test library',
     author='Zhiyong Zhu',
     author_email='z13913982280@gmail.com',
     url='https://github.com/remla23-team09/lib',
     license='MIT',
-    long_description="foo bar baz",
-    packages=['test_package_15551'],
+    long_description="fREMLA23_team12_lib",
+    packages=setuptools.find_packages(),
     install_requires=[
         'requests',
     ],
