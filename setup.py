@@ -1,17 +1,17 @@
 from setuptools import setup
 import setuptools
-from src.VersionUtil import VersionUtil
+from remla23team09librelease.VersionUtil import VersionUtil
 
 
 setup(
-    name='PLZREMLA23Team09LibProject',
+    name='remla23team09librelease',
     version=VersionUtil.get_version(),
     description='A version-aware library',
     author='Zhiyong Zhu',
     author_email='z13913982280@gmail.com',
     url='https://github.com/remla23-team09/lib',
     license='MIT',
-    long_description="PLZREMLA23Team09LibProject",
+    long_description="remla23team09librelease",
     packages=setuptools.find_packages(),
     install_requires=[
         'requests',
