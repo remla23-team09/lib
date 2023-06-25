@@ -11,7 +11,7 @@ setup(
     author_email='z13913982280@gmail.com',
     url='https://github.com/remla23-team09/lib',
     license='MIT',
-    long_description="remla23team09librelease",
+    long_description="package for remla",
     packages=setuptools.find_packages(),
     install_requires=[
         'requests',
