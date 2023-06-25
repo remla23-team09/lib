@@ -2,6 +2,7 @@ from setuptools import setup
 import setuptools
 from src.VersionUtil import VersionUtil
 
+
 setup(
     name='REMLA23Team09Lib',
     version=VersionUtil.get_version(),
