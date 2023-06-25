@@ -3,14 +3,14 @@ import setuptools
 from src.VersionUtil import VersionUtil
 
 setup(
-    name='REMLA23_team09_lib',
+    name='REMLA23Team09Lib',
     version=VersionUtil.get_version(),
     description='A version-aware library',
     author='Zhiyong Zhu',
     author_email='z13913982280@gmail.com',
     url='https://github.com/remla23-team09/lib',
     license='MIT',
-    long_description="fREMLA23_team09_lib",
+    long_description="REMLA23Team09Lib",
     packages=setuptools.find_packages(),
     install_requires=[
         'requests',
