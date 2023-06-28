@@ -1,3 +1,10 @@
 # lib
-It is a version-aware library, run 'pip install remla23team09librelease==1.0.0' to install the lib. 
-You can use "VersionUtil.get_version()" to check the version.
+Containing a version-aware library.
+
+## Installation
+To install the lib:
+- Run 'pip install remla23team09librelease==1.0.0'
+
+## Usage
+To check the version: 
+- Use `VersionUtil.get_version()`
